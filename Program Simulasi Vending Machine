@@ -1,0 +1,18 @@
+#Program Simulasi Vending Machine
+#Berpikir Komputasional
+nama = ["Air Mineral", "Roti", "Teh Pucuk", "Ultra Milk", "Coca-Cola", "Sprite", "Pocari Sweat", "Milo", "Beng-Beng", "Chitato"]
+harganya = [5000, 8000, 4000, 6000, 7000, 7000, 8000, 6000, 3000, 5000]
+print("===Produk Kami===")
+for i in range(10):
+    print(f"{i+1}. {nama[i]} = {harganya[i]}")
+pilihan = int(input("Masukkan Nomor Produk = "))
+uang = int(input("Masukkan Nominal Uang = "))
+if 1 <= pilihan and pilihan <= 10:
+    harga = harganya[pilihan-1]
+    if uang < harga:
+        print("Uang tidak cukup")
+    else:
+        print(f"Produk {nama[pilihan-1]} keluar")
+        print(f"Kembalian = {uang - harga}")
+else:
+    print("pilihan tidak valid")
